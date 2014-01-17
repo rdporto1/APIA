@@ -38,17 +38,26 @@ Há uma estrutura em memória com os parâmetros globais que estão disponíveis
 programas. Trata-se do config com os campos:
 
 ano0: 2003
+
 mes0: 1
+
 tri0: 1
+
 ano: 2013
+
 m1: 9
+
 m2: 9
+
 m3: 9
 
-O início de uma série deve ser informado nos campos ano0, mes0 e tri0. Para não ter de
-informar o início de todas as séries usase
-os valores de config, config.ano0, config.mes0 e
-config.tri0. O campo ano se refere ao ano que se deseja projetar, assim como m1, m2 e m3
-são os três meses do trimestre em estudo. Com essa estrutura, as rotinas podem chamar
-config.m1 que será traduzido em janeiro no primeiro trimestre, abril no segundo, julho no
-terceiro e outubro no quarto. Assim não é preciso mudar o script a cada novo trimestre.
+
+O início de uma série deve ser informado nos campos ano0, mes0 e tri0. Para não ter de informar o início de todas as séries usa-se os valores de config, config.ano0, config.mes0 e config.tri0. O campo ano se refere ao ano que se deseja projetar, assim como m1, m2 e m3 são os três meses do trimestre em estudo. Com essa estrutura, as rotinas podem chamar
+config.m1 que será traduzido em janeiro no primeiro trimestre, abril no segundo, julho no terceiro e outubro no quarto. Assim não é preciso mudar o script a cada novo trimestre.
+
+Observe nos campos m1, m2 e m3 acima há apenas o valor 9. Isso é como se inicializa o
+config para projetar uma série mensal como a PIM. Os três meses são o mesmo, neste caso
+setembro de 2013. Assim a expressão m1:m3 funciona para listar os três meses do trimestre
+bem com para lista o único mês da projeção de uma variável mensal.
+
+O arquivo Demonstra.m traz um exemplo completo com todas as funções disponíveis. Vamos percorrê-lo com detalhes no que segue.
